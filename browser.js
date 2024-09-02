@@ -171,3 +171,5 @@ async function __wbg_init() {
 
   return __wbg_finalize_init(instance, module);
 }
+
+export default __wbg_init;
