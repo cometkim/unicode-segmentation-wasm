@@ -1,0 +1,16 @@
+{
+  "name": "unicode-segmentation-wasm",
+  "exports": {
+    "node": "./nodejs/lib.js",
+    "browser": {
+      "types": "./browser.d.ts",
+      "default": "./browser.js"
+    }
+  },
+  "scripts": {
+    "build": "wasm-pack build --release --no-pack --target nodejs --out-dir nodejs --out-name lib"
+  },
+  "devDependencies": {
+    "wasm-pack": "^0.13.0"
+  }
+}
