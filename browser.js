@@ -77,16 +77,6 @@ function passStringToWasm0(arg, malloc, realloc) {
   WASM_VECTOR_LEN = offset;
   return ptr;
 }
-/**
-* @param {string} val
-* @returns {number}
-*/
-export function count(val) {
-  const ptr0 = passStringToWasm0(val, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
-  const len0 = WASM_VECTOR_LEN;
-  const ret = wasm.count(ptr0, len0);
-  return ret >>> 0;
-}
 
 let cachedInt32Memory0 = null;
 
@@ -130,6 +120,7 @@ function getArrayJsValueFromWasm0(ptr, len) {
   }
   return result;
 }
+
 /**
 * @param {string} val
 * @returns {(string)[]}
