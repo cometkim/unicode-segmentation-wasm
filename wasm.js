@@ -1,6 +1,10 @@
-import * as path from 'node:path';
-import * as fs from 'node:fs/promises';
+const path = require('node:path');
+const fs = require('node:fs/promises');
 
-export async function getBinary() {
-  return await fs.readFile(path.join(import.meta.dirname, 'nodejs/lib_bg.wasm'));
+async function getBinary() {
+  return await fs.readFile(path.join(__dirname, 'nodejs/lib_bg.wasm'));
 }
+
+module.exports = {
+  getBinary,
+};
