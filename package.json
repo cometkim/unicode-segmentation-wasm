@@ -3,11 +3,14 @@
   "version": "0.0.1",
   "private": true,
   "exports": {
-    "node": "./nodejs/lib.js",
-    "browser": {
-      "types": "./browser.d.ts",
-      "default": "./browser.js"
-    }
+    ".": {
+      "node": "./nodejs/lib.js",
+      "browser": {
+        "types": "./browser.d.ts",
+        "default": "./browser.js"
+      }
+    },
+    "./wasm": "./wasm.js"
   },
   "scripts": {
     "build": "wasm-pack build --release --no-pack --target nodejs --out-dir nodejs --out-name lib"
